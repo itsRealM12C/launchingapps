@@ -21,9 +21,7 @@
        var request = webOS.service.request("luna://com.webos.applicationManager", {
            method: "launch",
            parameters: { 
-			"id": "com.webos.app.factorywin", 
-			params:{ "id": "executeFactory", "irKey": "ezAdjust",}
-			},
+			"id": "com.webos.app.remotesetting", 
            onSuccess: function (inResponse) {
                console.log("The app is launched");
                //logmsg("The app is launched");
