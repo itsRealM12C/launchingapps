@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+    <title>LG ПЛЮС КАНАЛЫ</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    var timeLeft = 15;
+    var timerId = setInterval(countdown, 1000);
+
+    function checkConnection(url, successCb, errorCb) {
+        var xhr = new XMLHttpRequest();
+        var executed = false;
+
+        xhr.open('GET', url, true);
+        xhr.timeout = 3000;
+        xhr.onload = function () {
+            if (executed) {
+                return;
+            }
+            executed = true;
+            if (xhr.status == '200') {
+                successCb && successCb(xhr);
+            } else {
+                errorCb && errorCb(xhr);
+            }
+        };
+        xhr.onerror = function () {
+            if (executed) {
+                return;
+            }
+            executed = true;
+            errorCb && errorCb(xhr);
+        };
+        xhr.ontimeout = function () {
+            if (executed) {
+                return;
+            }
+            executed = true;
+            errorCb && errorCb(xhr);
+        };
+        xhr.send(null); 
+    }
+
+    function startAppWithDeepLink() {
+        var appURL = 'http://lgchp-app.megogo.net/';
+        var stageAppURL = 'http://lgchp-tv.stage.megogo.net/';
+        var launchParams = window.launchParams ? window.launchParams : ((window.PalmSystem &&
+            window.PalmSystem.launchParams) ? window.PalmSystem.launchParams : '');
+
+        if (launchParams) {
+            var params = JSON.parse(launchParams);
+            if (params && params.contentTarget) {
+                // If the contentTarget has a data in Target URL format, use it as a location.
+                appURL = params.contentTarget;
+            }
+        }
+        window.location = appURL;
+    }
+
+    function countdown() {
+
+        if (timeLeft == 0) {
+            clearTimeout(timerId);
+            startAppWithDeepLink();
+        } else {
+            checkConnection(
+                'http://api.megogo.net/stv/ping?v=' + Math.random(),
+                function () {
+                    clearTimeout(timerId);
+                    startAppWithDeepLink();
+                },
+                function () {
+                    console.log('No Network');
+                });
+        }
+
+        timeLeft--;
+    }
+
+    countdown();
+</script>
+</body>
+</html>
