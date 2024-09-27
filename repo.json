@@ -405,17 +405,17 @@
        {
       "id": "lgplus",
       "title": "LG Channels",
-      "iconUri": "https://github.com/itsrealm12c/launchingapps/apps/com.lgplus.app/icon.png",
+      "iconUri": "https://raw.githubusercontent.com/itsRealM12C/launchingapps/refs/heads/main/apps/com.lgplus.app/icon.png",
       "manifest": {
         "id": "lgplus",
         "version": "1.0.0",
         "type": "web",
         "title": "LG Channels",
         "appDescription": "LG Channel.",
-        "iconUri": "https://github.com/itsrealm12c/launchingapps/apps/com.lgplus.app/icon.png",
+        "iconUri": "https://raw.githubusercontent.com/itsRealM12C/launchingapps/refs/heads/main/apps/com.lgplus.app/icon.png",
         "sourceUrl": "https://github.com/webosappclub/webosappclub.github.io/",
         "rootRequired": false,
-        "ipkUrl": "https://github.com/itsrealm12c/launchingapps/apps/com.lgplus.app/lgplus.ipk",
+        "ipkUrl": "https://raw.githubusercontent.com/itsRealM12C/launchingapps/blob/main/apps/com.lgplus.app/lgplus.ipk",
         "ipkHash": {
           "sha256": "f793e42fb3e0a35460c3a7f12bc55beb7228ff53f814aa76d3fc38a1bfe49372"
         },
