@@ -422,7 +422,7 @@
            {
       "id": "vlc.lgapp",
       "title": "VLC Media Player",
-      "iconUri": "https://raw.githubusercontent.com/itsRealM12C/launchingapps/refs/heads/main/apps/com.lgplus.app/icon.png",
+      "iconUri": "https://raw.githubusercontent.com/itsRealM12C/launchingapps/refs/heads/main/apps/vlc.lgapp/icon.png",
       "manifest": {
         "id": "vlc.lgapp",
         "version": "1.0.0",
@@ -430,7 +430,7 @@
         "title": "VLC Media Player",
         "appDescription": "VLC Media Player for LG webOS TV.",
         "iconUri": "https://raw.githubusercontent.com/itsRealM12C/launchingapps/refs/heads/main/apps/vlc.lgapp/icon.png",
-        "sourceUrl": "no source buddy.",
+        "sourceUrl": "https://github.com/itsRealM12C/launchingapps",
         "rootRequired": false,
         "ipkUrl": "https://github.com/itsRealM12C/launchingapps/raw/refs/heads/main/apps/vlc.lgapp/com.hobbyistsoftware.vlcremote_1.1.0_all.ipk",
         "ipkHash": {
@@ -439,6 +439,6 @@
         "ipkSize": 358925
       },
       "shortDescription": "VLC Media Player for LG webOS TV.",
-      "fullDescriptionUrl": "https://itsrealm12c.github.io/launchingapps/apps/vlc.lgapp"
+      "fullDescriptionUrl": "https://itsrealm12c.github.io/launchingapps/apps/vlc.lgapp/index.html"
     }  
 }
